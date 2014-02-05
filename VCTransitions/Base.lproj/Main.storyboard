@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HXb-yQ-iVz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Blue View Controller - Blue-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CHBBlueViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Oj-d9-AJi"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYE-cl-9vu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="CHBView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9s-Gv-e6p">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.083017770291573145" green="0.33279534925710458" blue="0.50071747448979598" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ODh-Fr-BDf"/>
+                                    <constraint firstAttribute="height" constant="150" id="weK-sH-MlK"/>
+                                </constraints>
+                                <state key="normal" title="Present Orange">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oAp-AU-Cd0" kind="modal" identifier="RevealOrangeFromBlue" id="sXc-Wl-Jrm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1098039299" green="0.67450982329999998" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="R9s-Gv-e6p" secondAttribute="centerX" id="DbB-5c-pe1"/>
+                            <constraint firstAttribute="centerY" secondItem="R9s-Gv-e6p" secondAttribute="centerY" id="Hbo-LI-bXf"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="button" destination="R9s-Gv-e6p" id="MBp-42-ILF"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blue" id="UGV-dw-M1V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="-234"/>
+        </scene>
+        <!--Orange View Controller-->
+        <scene sceneID="ooY-Ep-t97">
+            <objects>
+                <viewController id="oAp-AU-Cd0" customClass="CHBOrangeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dcz-yn-ZOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Chk-RX-aBg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mn4-Xk-8Yg" customClass="CHBView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdS-dE-S2p">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="oAD-4N-MeT"/>
+                                    <constraint firstAttribute="height" constant="150" id="w3F-Jl-0fB"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss Orange">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kkJ-pX-lGz" kind="unwind" unwindAction="unwindToBlue:" id="9zL-F6-aZX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="DdS-dE-S2p" secondAttribute="centerX" id="4sb-QH-Tt2"/>
+                            <constraint firstAttribute="centerY" secondItem="DdS-dE-S2p" secondAttribute="centerY" id="qv0-J3-rbL"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="button" destination="DdS-dE-S2p" id="tkj-l1-rzH"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="7y2-WQ-7Cf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87D-hI-sv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kkJ-pX-lGz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1800" y="-234"/>
+        </scene>
+        <!--Green View Controller - Blue-->
+        <scene sceneID="O9O-0v-BA8">
+            <objects>
+                <viewController id="HXb-yQ-iVz" customClass="CHBGreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wek-uk-ite"/>
+                        <viewControllerLayoutGuide type="bottom" id="KE0-sI-0DO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rsv-cJ-HVB" customClass="CHBView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhW-LN-zMa">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68667864320198935" green="1" blue="0.36784675343884865" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Rnk-Au-P03"/>
+                                    <constraint firstAttribute="width" constant="150" id="wUY-Vm-ayQ"/>
+                                </constraints>
+                                <state key="normal" title="Present Red">
+                                    <color key="titleColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zI2-Fd-eZ7" kind="modal" identifier="RevealRedFromGreen" id="2C7-uV-nnm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yhW-LN-zMa" secondAttribute="centerX" id="8zH-yn-SEc"/>
+                            <constraint firstAttribute="centerY" secondItem="yhW-LN-zMa" secondAttribute="centerY" id="MMP-4W-NeV"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="button" destination="yhW-LN-zMa" id="p9R-Hz-ULo"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blue" id="8gB-Vd-5h6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcV-CU-bbn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="488"/>
+        </scene>
+        <!--Red View Controller-->
+        <scene sceneID="j5D-Xg-u8v">
+            <objects>
+                <viewController id="zI2-Fd-eZ7" customClass="CHBRedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMS-8h-Bfb"/>
+                        <viewControllerLayoutGuide type="bottom" id="TDS-fb-B9R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qtm-Um-7w1" customClass="CHBView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-31-2sQ">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="9Kr-zv-j33"/>
+                                    <constraint firstAttribute="width" constant="150" id="slY-cx-ne5"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss Red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pUN-Ur-yUv" kind="unwind" unwindAction="unwindToGreen:" id="ybn-OJ-wZZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pNJ-31-2sQ" secondAttribute="centerY" id="tPQ-Dn-wuX"/>
+                            <constraint firstAttribute="centerX" secondItem="pNJ-31-2sQ" secondAttribute="centerX" id="wfZ-NW-iur"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="button" destination="pNJ-31-2sQ" id="8px-17-DFC"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="3RB-ex-PCd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSW-Ts-8WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pUN-Ur-yUv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="488"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
