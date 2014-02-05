@@ -79,12 +79,12 @@ static CGFloat kScalePresented = 0.7f;
 - (CATransform3D)transformPresentingView:(UIView *)view
 {
     CATransform3D transform3D = CATransform3DIdentity;
-    transform3D = CATransform3DTranslate(transform3D, -CGRectGetWidth(view.bounds) / 2, 0, 0);
-    transform3D = CATransform3DRotate(transform3D, M_PI * 1.5f, 0.0, 1.f, 0.0);
-    transform3D = CATransform3DTranslate(transform3D, CGRectGetWidth(view.bounds) / 2, 0, 0);
-    
     // http://milen.me/technical/core-animation-3d-model/
     transform3D.m34 = 1.f / -500.f;
+    transform3D = CATransform3DTranslate(transform3D, -CGRectGetWidth(view.bounds) / 2, 0, 0);
+    transform3D = CATransform3DRotate(transform3D, M_PI / 2.f, 0.0, 1.f, 0.0);
+    transform3D = CATransform3DTranslate(transform3D, CGRectGetWidth(view.bounds) / 2, 0, 0);
+    
     
     return transform3D;
 }

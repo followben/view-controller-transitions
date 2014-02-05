@@ -244,13 +244,11 @@ static CGFloat kScalePresented = 0.7f;
 - (CATransform3D)transformPresentingView:(UIView *)view percentComplete:(CGFloat)percentComplete
 {
     CATransform3D transform3D = CATransform3DIdentity;
+    // http://milen.me/technical/core-animation-3d-model/
+    transform3D.m34 = 1.f / -500.f;
     transform3D = CATransform3DTranslate(transform3D, -(CGRectGetWidth(view.bounds) / 2), 0, 0);
     transform3D = CATransform3DRotate(transform3D, M_PI * percentComplete / 2, 0.0, 1.f, 0.0);
     transform3D = CATransform3DTranslate(transform3D, (CGRectGetWidth(view.bounds) / 2), 0, 0);
-    
-    // TODO
-    // http://milen.me/technical/core-animation-3d-model/
-//    transform3D.m34 = 1.f / -500.f;
     
     return transform3D;
 }
